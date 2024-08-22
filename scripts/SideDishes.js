@@ -1,6 +1,6 @@
-import { getSides, setSide } from "./database.js"
 
-const sideDishes = getSides()
+
+
 
 document.addEventListener("change", (event) => {
     if (event.target.name === "sideDish") {
@@ -9,12 +9,14 @@ document.addEventListener("change", (event) => {
 })
 
 // Requirement: The radio input elements that this component funcion renders must all have a name of "sideDish"
-export const Sides = () => {
+export const SidesHTML = async () => {
+    const response = await fetch("http://localhost:8088/sides")
+    const sides = await response.json()
     let html = "<ul>"
 
-    const listItems = sideDishes.map(dish => {
+    const listItems = sides.map(dish => {
         return `<li>
-            <input type="radio" />
+            <input type="radio" name="sideDishes" value="${dish.id}"> ${dish.title}
         </li>`
     })
 

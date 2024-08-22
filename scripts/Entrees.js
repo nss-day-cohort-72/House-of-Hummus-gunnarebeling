@@ -1,8 +1,13 @@
+import { setEntreeChoice } from "./TransientState.js";
 
 
 
 
 document.addEventListener("change", (event) => {
+    if (event.target.name === "entree") {
+        setEntreeChoice(parseInt(event.target.value))
+        
+    }
 
 })
 

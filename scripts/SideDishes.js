@@ -1,10 +1,11 @@
+import { setsidesChoice } from "./TransientState.js"
 
 
 
 
 document.addEventListener("change", (event) => {
     if (event.target.name === "sideDish") {
-        setSide(parseInt(event.target.value))
+        setsidesChoice(parseInt(event.target.value))
     }
 })
 
@@ -16,7 +17,7 @@ export const SidesHTML = async () => {
 
     const listItems = sides.map(dish => {
         return `<li>
-            <input type="radio" name="sideDishes" value="${dish.id}"> ${dish.title}
+            <input type="radio" name="sideDish" value="${dish.id}"> ${dish.title}
         </li>`
     })
 

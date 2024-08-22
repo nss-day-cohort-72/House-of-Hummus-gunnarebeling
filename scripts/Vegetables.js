@@ -1,10 +1,11 @@
+import { setVeggieChoice } from "./TransientState.js";
 
 
 
 
 document.addEventListener("change", (event) => {
     if (event.target.name === "vegetable") {
-        setVeggie(event.target.value)
+        setVeggieChoice(parseInt(event.target.value))
     }
 })
 

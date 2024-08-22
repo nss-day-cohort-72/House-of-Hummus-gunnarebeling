@@ -1,30 +1,42 @@
+import { submitPurchase } from "./TransientState.js"
 
 
-const buildOrderListItem = (order) => {
-    const veggies = getVeggies()
+const postPurchases =  (event) =>{
+    if (event.target.id === "purchase") {
+         submitPurchase()
+        
+    }
+}
+export const SubmitButtonHTML = () => {
+    document.addEventListener("click",postPurchases)
+    return `<button id="purchase">Purchase Combo</button>`
 
-
-    const total = veggiePrice + entreePrice + sidePrice
+}
+const buildOrderListItem =  (order) =>{
+    
+    const total = order.veggies.price + order.entrees.price + order.sides.price
 
     return `<li>
-        Receipt #${order} = ${total.toLocaleString("en-US", {
+        Receipt #${order.id} = ${total.toLocaleString("en-US", {
             style: "currency",
             currency: "USD"
         })}
     </li>`
 }
 
-// export const Sales = () => {
-//     const sales = getPurchases()
-//     return `
-//         <ul>
-//             ${sales.map(
-//                 (sale) => {
-//                     // Reflect: What is the scope of this `return` keyword?
-//                     return buildOrderListItem(sale)
-//                 }
-//             ).join("")}
-//         </ul>
-//     `
-// }
+
+export const Sales = async () => {
+    const response = await fetch("http://localhost:8088/purchases?_expand=entrees&_expand=veggies&_expand=sides")
+    const sales = await response.json()
+    return `
+        <ul>
+            ${sales.map(
+                (sale) => {
+                    // Reflect: What is the scope of this `return` keyword?
+                    return buildOrderListItem(sale)
+                }
+            ).join("")}
+        </ul>
+    `
+}
 

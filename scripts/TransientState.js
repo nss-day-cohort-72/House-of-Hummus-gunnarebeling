@@ -4,7 +4,7 @@ const resetTransientState =
     veggiesId: 0,
     sidesId: 0,
 }
-let transientState = resetTransientState
+let transientState = {...resetTransientState}
 
 export const setEntreeChoice = (currentState) => {
     transientState.entreesId = currentState
@@ -38,10 +38,16 @@ export const submitPurchase = async () => {
             body: JSON.stringify(transientState)
         }
         const response = await fetch("http://localhost:8088/purchases", postOptions)
-        transientState = resetTransientState
+        transientState = {...resetTransientState}
         document.dispatchEvent(new CustomEvent("stateChanged"))
+        
+        
+        
+        
     }else{
         window.alert("please make sure you have selected all options")
     }
+
     
 }
+

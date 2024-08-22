@@ -154,6 +154,102 @@
       "veggiesId": 8,
       "sidesId": 5,
       "id": 4
+    },
+    {
+      "entreesId": 6,
+      "veggiesId": 8,
+      "sidesId": 5,
+      "id": 5
+    },
+    {
+      "entreesId": 6,
+      "veggiesId": 8,
+      "sidesId": 5,
+      "id": 6
+    },
+    {
+      "entreesId": 6,
+      "veggiesId": 8,
+      "sidesId": 5,
+      "id": 7
+    },
+    {
+      "entreesId": 7,
+      "veggiesId": 9,
+      "sidesId": 5,
+      "id": 8
+    },
+    {
+      "entreesId": 7,
+      "veggiesId": 9,
+      "sidesId": 5,
+      "id": 9
+    },
+    {
+      "entreesId": 6,
+      "veggiesId": 7,
+      "sidesId": 5,
+      "id": 10
+    },
+    {
+      "entreesId": 10,
+      "veggiesId": 8,
+      "sidesId": 6,
+      "id": 11
+    },
+    {
+      "entreesId": 5,
+      "veggiesId": 8,
+      "sidesId": 6,
+      "id": 12
+    },
+    {
+      "entreesId": 5,
+      "veggiesId": 8,
+      "sidesId": 6,
+      "id": 13
+    },
+    {
+      "entreesId": 5,
+      "veggiesId": 6,
+      "sidesId": 6,
+      "id": 14
+    },
+    {
+      "entreesId": 7,
+      "veggiesId": 9,
+      "sidesId": 5,
+      "id": 15
+    },
+    {
+      "entreesId": 7,
+      "veggiesId": 9,
+      "sidesId": 5,
+      "id": 16
+    },
+    {
+      "entreesId": 7,
+      "veggiesId": 9,
+      "sidesId": 5,
+      "id": 17
+    },
+    {
+      "entreesId": 7,
+      "veggiesId": 9,
+      "sidesId": 5,
+      "id": 18
+    },
+    {
+      "entreesId": 6,
+      "veggiesId": 8,
+      "sidesId": 6,
+      "id": 19
+    },
+    {
+      "entreesId": 4,
+      "veggiesId": 6,
+      "sidesId": 5,
+      "id": 20
     }
   ]
 }

@@ -17,7 +17,7 @@ export const EntreesHTML = async () =>{
     const entrees = await response.json();
     let html = `<ul>`
     let entreesListArray = entrees.map(entree => {
-       return `<li>
+       return `<li class="choices__base">
                     <input type="radio" name="entree" value="${entree.id}">${entree.name}
                 </li>`
     })

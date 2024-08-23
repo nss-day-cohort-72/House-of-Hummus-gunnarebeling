@@ -16,7 +16,7 @@ export const VeggiesHTML = async () => {
     let html = `<ul>
         ${
             veggies.map(vegetable => {
-                return `<li>
+                return `<li class="choices__veggies">
                             <input type="radio" name="vegetable" value="${vegetable.id}" /> ${vegetable.type}
                         </li>`
             }).join("")

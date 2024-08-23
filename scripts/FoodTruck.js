@@ -15,7 +15,7 @@ export const FoodTruck = async () => {
     const entreesHTML = await EntreesHTML();
     const veggiesHTML = await VeggiesHTML();
     const sidesHTML = await SidesHTML()
-    const submitButton = SubmitButtonHTML()
+    const submitButton = await SubmitButtonHTML()
     const salesHTML = await Sales()
     return `
         <header class="header">
@@ -43,13 +43,15 @@ export const FoodTruck = async () => {
             
             </div>
             <article>
+            <div id="purchaseCombo">
             ${submitButton}
-                
+             </div>   
             </article>
         </div>
         <article class="customerOrders">
             <h2>Monthly Sales</h2>
             <!--sales-->
+            
             ${salesHTML}
 
         </article>

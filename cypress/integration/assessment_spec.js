@@ -64,6 +64,7 @@ describe('Tests purchasing a full meal', () => {
                 cy.get(".customerOrders").contains("Receipt #1 =")
             })
             .then(() => {
+                
                 cy.get('input[name="entree"]').check("8")
                 cy.get('input[name="vegetable"]').check("7")
                 cy.get('input[name="sideDish"]').check("2")

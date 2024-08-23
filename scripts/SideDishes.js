@@ -16,7 +16,7 @@ export const SidesHTML = async () => {
     let html = "<ul>"
 
     const listItems = sides.map(dish => {
-        return `<li>
+        return `<li class="choices__sides">
             <input type="radio" name="sideDish" value="${dish.id}"> ${dish.title}
         </li>`
     })
